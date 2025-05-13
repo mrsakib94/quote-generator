@@ -8,20 +8,20 @@ const xTwitterBtn = document.getElementById('x-twitter');
 let apiQuotes = [];
 
 // Loading Spinner Shown
-function loading() {
+function showLoader() {
   loader.classList.remove('hidden');
   quoteContainer.classList.add('hidden');
 }
 
 // Remove Loading Spinner
-function complete() {
+function removeLoader() {
   quoteContainer.classList.remove('hidden');
   loader.classList.add('hidden');
 }
 
 // Show New Quote
 function newQuote() {
-  loading();
+  showLoader();
 
   // Pick a random quote from array
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
@@ -36,7 +36,7 @@ function newQuote() {
 
   // Set Quote, Hide Loader
   quoteText.textContent = quote.text;
-  complete();
+  removeLoader();
 }
 
 // Get Quotes From API
@@ -44,7 +44,7 @@ async function getQuotes() {
   const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
 
   try {
-    loading();
+    showLoader();
     const response = await fetch(apiUrl);
     apiQuotes = await response.json();
     newQuote();
