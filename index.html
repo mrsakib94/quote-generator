@@ -12,30 +12,42 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="quote-container" id="quote-container">
-      <!-- Quote  -->
-      <div class="quote-text">
-        <i class="fa-solid fa-quote-left"></i>
-        <span id="quote"
-          >Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit...</span
-        >
+    <main>
+      <div class="quote-container" id="quote-container">
+        <!-- Quote  -->
+        <div class="quote-text">
+          <i class="fa-solid fa-quote-left"></i>
+          <span id="quote"
+            >Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit...</span
+          >
+        </div>
+        <!-- Author -->
+        <div class="quote-author">
+          <span id="author">Lorem Ipsum</span>
+        </div>
+        <!-- Buttons -->
+        <div class="button-container">
+          <button class="x-twitter-button" id="x-twitter" title="Post This!">
+            <i class="fa-brands fa-x-twitter"></i>
+          </button>
+          <button id="new-quote">
+            <i class="fa-solid fa-rotate"></i>
+            <span id="quote-button-label">New Quote</span>
+          </button>
+        </div>
       </div>
-      <!-- Author -->
-      <div class="quote-author">
-        <span id="author">Lorem Ipsum</span>
+    </main>
+    <footer class="footer">
+      <div class="contact-info">
+        <a href="https://github.com/mrsakib94" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/mrsakib94/" target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
       </div>
-      <!-- Buttons -->
-      <div class="button-container">
-        <button class="x-twitter-button" id="x-twitter" title="Post This!">
-          <i class="fa-brands fa-x-twitter"></i>
-        </button>
-        <button id="new-quote">
-          <i class="fa-solid fa-rotate"></i>
-          <span>New Quote</span>
-        </button>
-      </div>
-    </div>
+    </footer>
     <!-- Script -->
     <script src="script.js"></script>
   </body>
